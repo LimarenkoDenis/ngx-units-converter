@@ -7,9 +7,25 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:library": "ng-packagr -p package.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LimarenkoDenis/ngx-units-converter.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "units-converter",
+    "ngx-units-converter",
+    "angular-units-converter",
+    "angular2-units-converter"
+  ],
   "private": true,
+  "peerDependencies": {
+    "@angular/common": ">=6.0.0",
+    "@angular/core": ">=6.0.0"
+  },
   "dependencies": {
     "@angular/animations": "^6.0.3",
     "@angular/common": "^6.0.3",

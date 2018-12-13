@@ -1,27 +1,68 @@
 # NgxUnitsConverter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+### Installing
+`npm install --save ngx-units-converter`
 
-## Development server
+### Usage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+import {UnitsConvererModule} from 'ngx-units-converter'
 
-## Code scaffolding
+(...)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  (...)
+  imports: [
+    UnitsConvererModule
+  ]
+  (...)
+})
 
-## Build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Pipe
+```
+ Params
+  - from: string, 
+  - to: string, 
+  Optionals
+  - round: number
+  
+  <p> {{ 20 | unitsConverter: { from: 'mm', to: 'in', round: 3 } }}</p>
+```
 
-## Running unit tests
+### Service
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### List of avialable measures (length, mass...)
+```
+export class YourClass {
+  public constructor(private _unitsConverorService: UnitsConverorService) {
+    this._unitsConverorService.measures() 
+  }
+}
+```
 
-## Running end-to-end tests
+### Get description by unit name
+```
+{
+    unitname: string;
+    measure: string;
+    system: string;
+    definition: {
+      name: {
+        singular: 'Millimeter',
+        plural: 'Millimeters'
+      },
+      to_anchor: 1 / 1000
+    };
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+export class YourClass {
+  public constructor(private _unitsConverorService: UnitsConverorService) {
+    this._unitsConverorService.describe('mm') 
+  }
+}
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
