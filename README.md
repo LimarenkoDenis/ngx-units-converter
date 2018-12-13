@@ -1,5 +1,10 @@
 # NgxUnitsConverter
 
+
+##
+<a href="https://stackblitz.com/edit/angular-lfeuen">Pls try - Demo</a>
+
+
 ### Installing
 `npm install --save ngx-units-converter`
 
