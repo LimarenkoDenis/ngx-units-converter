@@ -1,26 +1,8 @@
 import { unit } from './index';
-import { charge } from './definitions/charge';
-import { apparentPower } from './definitions/apparentPower';
-import { angle } from './definitions/angle';
-import { acceleration } from './definitions/acceleration';
 import { Injectable } from '@angular/core';
 import { each } from 'lodash';
-import { pressure } from './definitions/pressure';
-import { length } from './definitions/length';
-import { area } from './definitions/area';
-import { mass } from './definitions/mass';
 import { IMeasure, IFoundUnit, IUnitDefinition, IUnitSystem, IDefinition } from './interfaces';
-
-const measures: { [system: string]: IMeasure } = {
-  pressure,
-  length,
-  area,
-  mass,
-  acceleration,
-  angle,
-  apparentPower,
-  charge,
-};
+import { measures } from './definitions';
 
 @Injectable()
 export class UnitsConverorService {
@@ -67,7 +49,7 @@ export class UnitsConverorService {
 
   public from(unitFromConvert: unit | string): UnitsConverorService {
     if (this.destination) {
-      this.throwError('.from must be called before .to');
+      this.throwError('.from must be called before .to, or use .round()');
     }
 
     this.origin = this.getUnit(unitFromConvert);

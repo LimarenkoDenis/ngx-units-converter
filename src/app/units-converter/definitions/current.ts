@@ -1,6 +1,6 @@
-var current;
+import { IUnitDefinition, IMeasure } from '../interfaces';
 
-current = {
+const metric: IUnitDefinition = {
   A: {
     name: {
       singular: 'Ampere'
@@ -24,9 +24,10 @@ current = {
   }
 };
 
-module.exports = {
-  metric: current
-, _anchors: {
+export const current: IMeasure = {
+  metric,
+  imperial: {},
+  _anchors: {
     metric: {
       unit: 'A'
     , ratio: 1

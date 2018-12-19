@@ -93,25 +93,60 @@ describe('WorkItemService', () => {
       });
     });
 
-    describe('mass, lb kN', () => {
-      it('100 lb Nm', () => {
-        expect(unitsConverorService.init(100).from('lb').to('kN').round()).toBe(0.44);
+
+    describe('temperature', () => {
+      it('0 C to K', () => {
+        expect(unitsConverorService.init(0).from('C').to('K').round()).toBe(273.15);
       });
 
-      it('200 lb Nm', () => {
-        expect(unitsConverorService.init(200).from('lb').to('kN').round()).toBe(0.89);
+      it('2 C to K', () => {
+        expect(unitsConverorService.init(2).from('C').to('K').round()).toBe(275.15);
       });
 
-      it('250 lb Nm', () => {
-        expect(unitsConverorService.init(250).from('lb').to('kN').round()).toBe(1.11);
+      it('0 C to F', () => {
+        expect(unitsConverorService.init(0).from('C').to('F').round()).toBe(32);
       });
 
-      it('300 lb Nm', () => {
-        expect(unitsConverorService.init(300).from('lb').to('kN').round()).toBe(1.33);
+      it('10 C to F', () => {
+        expect(unitsConverorService.init(10).from('C').to('F').round()).toBe(50);
       });
 
-      it('3000 lb Nm', () => {
-        expect(unitsConverorService.init(3000).from('lb').to('kN').round()).toBe(13.34);
+      it('0 F to K', () => {
+        expect(unitsConverorService.init(0).from('F').to('K').round()).toBe(255.37);
+      });
+
+      it('10 F to K', () => {
+        expect(unitsConverorService.init(10).from('F').to('K').round()).toBe(260.93);
+      });
+
+      it('0 F to C', () => {
+        expect(unitsConverorService.init(0).from('F').to('C').round()).toBe(-17.78);
+      });
+
+      it('100 F to C', () => {
+        expect(unitsConverorService.init(100).from('F').to('C').round()).toBe(37.78);
+      });
+
+
+      it('0 K to F', () => {
+        expect(unitsConverorService.init(0).from('K').to('F').round()).toBe(-459.67);
+      });
+
+      it('100 K to F', () => {
+        expect(unitsConverorService.init(1000).from('K').to('F').round()).toBe(1340.33);
+      });
+
+      it('0 K to C', () => {
+        expect(unitsConverorService.init(0).from('K').to('C').round()).toBe(-273.15);
+      });
+
+      it('200 K to C', () => {
+        expect(unitsConverorService.init(200).from('K').to('C').round()).toBe(-73.15);
+      });
+
+
+      it('500 K to C', () => {
+        expect(unitsConverorService.init(500).from('K').to('C').round()).toBe(226.85);
       });
     });
   });

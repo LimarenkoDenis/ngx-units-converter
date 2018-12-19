@@ -1,7 +1,4 @@
-var metric
-  , imperial;
-
-metric = {
+const metric = {
   'm/s': {
     name: {
       singular: 'Metre per second'
@@ -16,9 +13,9 @@ metric = {
     }
   , to_anchor: 1
   }
-}
+};
 
-  imperial = {
+const imperial = {
     'm/h': {
       name: {
         singular: 'Mile per hour'
@@ -42,7 +39,7 @@ metric = {
       }
 };
 
-module.exports = {
+export const speed = {
   metric: metric
 , imperial: imperial
 , _anchors: {

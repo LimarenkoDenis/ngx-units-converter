@@ -1,4 +1,3 @@
-
 const metric = {
   c: {
     name: {
@@ -38,7 +37,7 @@ const metric = {
 };
 
 export const charge = {
-  metric: metric
+  metric
   , imperial: {}
   , _anchors: {
     metric: {

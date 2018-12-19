@@ -1,7 +1,4 @@
-var metric
-  , imperial;
-
-metric = {
+const metric = {
   N: {
     name: {
       singular: 'Newton'
@@ -25,9 +22,8 @@ metric = {
   }
 };
 
-module.exports = {
+export const force = {
   metric: metric
-  , imperial: {}
   , _anchors: {
     metric: {
       unit: 'N'

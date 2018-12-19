@@ -1,6 +1,4 @@
-var voltage;
-
-voltage = {
+const voltageData = {
   V: {
     name: {
       singular: 'Volt'
@@ -24,8 +22,8 @@ voltage = {
   }
 };
 
-module.exports = {
-  metric: voltage
+export const voltage = {
+  metric: voltageData
 , _anchors: {
     metric: {
       unit: 'V'

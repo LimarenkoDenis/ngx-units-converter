@@ -1,6 +1,4 @@
-var frequency;
-
-frequency = {
+const frequencyData = {
   mHz: {
     name: {
       singular: 'millihertz'
@@ -67,8 +65,8 @@ frequency = {
 };
 
 
-module.exports = {
-  metric: frequency
+export const frequency = {
+  metric: frequencyData
 , _anchors: {
     frequency: {
       unit: 'hz'

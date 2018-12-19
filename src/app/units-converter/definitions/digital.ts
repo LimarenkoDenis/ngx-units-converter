@@ -1,7 +1,4 @@
-var bits
-  , bytes;
-
-bits = {
+const bits = {
   b: {
     name: {
       singular: 'Bit'
@@ -39,7 +36,7 @@ bits = {
   }
 };
 
-bytes = {
+const bytes = {
   B: {
     name: {
       singular: 'Byte'
@@ -77,9 +74,9 @@ bytes = {
   }
 };
 
-module.exports = {
-  bits: bits
-, bytes: bytes
+export const digital = {
+  bits
+, bytes
 , _anchors: {
     bits: {
       unit: 'b'

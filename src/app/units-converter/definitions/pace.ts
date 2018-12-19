@@ -1,7 +1,4 @@
-var metric
-  , imperial;
-
-metric = {
+const metric = {
   'min/km': {
     name: {
       singular: 'Minute per kilometre'
@@ -18,7 +15,7 @@ metric = {
   }
 }
 
-imperial = {
+const imperial = {
     'min/mi': {
       name: {
         singular: 'Minute per mile'
@@ -35,7 +32,7 @@ imperial = {
    }
 };
 
-module.exports = {
+export const pace = {
   metric: metric
 , imperial: imperial
 , _anchors: {

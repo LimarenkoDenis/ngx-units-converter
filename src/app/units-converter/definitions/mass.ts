@@ -1,6 +1,6 @@
-import { IUnitDefinition, IMeasure } from '../interfaces';
+import { IMeasure } from '../interfaces';
 
-const metric: IUnitDefinition = {
+const metric: any = {
     mcg: {
         name: {
             singular: 'Microgram'
@@ -45,7 +45,7 @@ const metric: IUnitDefinition = {
     }
 };
 
-const imperial: IUnitDefinition = {
+const imperial = {
     oz: {
         name: {
             singular: 'Ounce'

@@ -1,7 +1,4 @@
-var metric
-  , imperial;
-
-metric = {
+const metric = {
   ea: {
     name: {
       singular: 'Each'
@@ -18,7 +15,7 @@ metric = {
   }
 };
 
-module.exports = {
+export const each = {
   metric: metric
 , imperial: {}
 , _anchors: {

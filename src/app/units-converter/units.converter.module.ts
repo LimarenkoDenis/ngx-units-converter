@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { UnitsConverorService } from './units-converter.service';
 import { UnitsConverterPipe } from './units-converter.pipe';
 
-
 @NgModule({
   imports: [
     CommonModule,

@@ -1,6 +1,4 @@
-var reactiveEnergy;
-
-reactiveEnergy = {
+const reactiveEnergyData = {
   VARh: {
     name: {
       singular: 'Volt-Ampere Reactive Hour'
@@ -38,8 +36,8 @@ reactiveEnergy = {
   }
 };
 
-module.exports = {
-  metric: reactiveEnergy
+export const reactiveEnergy = {
+  metric: reactiveEnergyData
 , _anchors: {
     metric: {
       unit: 'VARh'

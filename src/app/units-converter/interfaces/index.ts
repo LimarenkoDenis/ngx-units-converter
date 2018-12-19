@@ -2,6 +2,7 @@ export interface IDefinition {
     name: { singular: string; plural: string; };
     to_anchor: number;
     anchor_shift?: number;
+    ratio?: number;
 }
 
 export interface IUnitDefinition {
@@ -10,13 +11,13 @@ export interface IUnitDefinition {
 
 export interface IUnitSystem {
     unit: string;
-    ratio: number;
+    ratio?: number;
     transform?: (unit: number) => number;
 }
 
 export interface IMeasure {
-    metric: IUnitDefinition;
-    imperial: IUnitDefinition;
+    metric?: IUnitDefinition;
+    imperial?: IUnitDefinition;
     _anchors: { [system: string]: IUnitSystem };
 }
 

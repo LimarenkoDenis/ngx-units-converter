@@ -38,8 +38,7 @@ const metric = {
 
 export const apparentPower = {
   metric,
-  imperial: {}
-  , _anchors: {
+  _anchors: {
     metric: {
       unit: 'VA'
       , ratio: 1

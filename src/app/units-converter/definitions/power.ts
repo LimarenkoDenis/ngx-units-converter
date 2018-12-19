@@ -1,6 +1,4 @@
-var power;
-
-power = {
+const powerData = {
   W: {
     name: {
       singular: 'Watt'
@@ -38,8 +36,8 @@ power = {
   }
 };
 
-module.exports = {
-  metric: power
+export const power = {
+  metric: powerData
 , _anchors: {
     metric: {
       unit: 'W'

@@ -1,9 +1,7 @@
-<div>
-  <h1>Examples</h1>
-  <p> {{ 20 | unitsConverter: { from: 'mm', to: 'in', round: 3 } }}</p>
-  <p> {{ 40 | unitsConverter: { from: 'mm', to: 'in', round: 3 } }}</p>
-  <p> {{ 50 | unitsConverter: { from: 'mm', to: 'in', round: 3 } }}</p>
-
-  <p> {{ 50 | unitsConverter: { from: 'C', to: 'K', round: 3 } }}</p>
-
-</div>
+<virtual-scroller #scroll [items]="data">
+  <p class="my-custom-component" *ngFor="let item of  scroll.viewPortItems">
+    {{ item.value }} {{item.from}} =
+    <span>{{ item.valueTo }}</span>
+    {{ item.to }}
+  </p>
+</virtual-scroller>

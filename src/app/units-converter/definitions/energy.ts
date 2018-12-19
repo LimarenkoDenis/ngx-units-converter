@@ -1,6 +1,4 @@
-var energy;
-
-energy = {
+const energyData = {
   Wh: {
     name: {
       singular: 'Watt-hour'
@@ -52,8 +50,8 @@ energy = {
   }
 };
 
-module.exports = {
-  metric: energy
+export const energy = {
+  metric: energyData
 , _anchors: {
     metric: {
       unit: 'J'

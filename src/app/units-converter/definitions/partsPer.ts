@@ -1,7 +1,4 @@
-var metric
-  , imperial;
-
-metric = {
+const metric = {
   ppm: {
     name: {
       singular: 'Part-per Million'
@@ -32,7 +29,7 @@ metric = {
   }
 };
 
-module.exports = {
+export const partsPer = {
   metric: metric
   , imperial: {}
   , _anchors: {
