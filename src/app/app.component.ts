@@ -40,11 +40,12 @@ export class AppComponent implements OnInit {
 
       for (let i = 0; i < next.length; i++) {
         for (let j = 0; j < next.length; j++) {
+          const initValue: number = Math.random() * 100;
           item.push({
             from: next[i],
             to: next[j],
-            value: Math.random() * 100,
-            valueTo: this.unitConverter.init(Math.random() * 100).from(next[i]).to(next[j]).round(3)
+            value: initValue,
+            valueTo: this.unitConverter.init(initValue).from(next[i]).to(next[j]).round(3)
           });
         }
       }
