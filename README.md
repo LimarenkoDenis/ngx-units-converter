@@ -2,7 +2,9 @@
 Angular module wrapper inspired by <a href="https://github.com/ben-ng/convert-units">convert-units</a>
 
 ##
-<a href="https://stackblitz.com/edit/angular-lfeuen">Pls try - Demo</a>
+<a href="https://limarenkodenis.github.io/ngx-units-converter/">Demo</a>
+
+<a href="https://stackblitz.com/edit/angular-lfeuen">Pls try - Demo playground</a>
 
 
 ### Installing
