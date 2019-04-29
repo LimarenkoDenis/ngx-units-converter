@@ -4,7 +4,9 @@ import { each } from 'lodash';
 import { IMeasure, IFoundUnit, IUnitDefinition, IUnitSystem, IDefinition } from './interfaces';
 import { measures } from './definitions';
 
-@Injectable()
+@Injectable({
+  provideIn: 'root'
+})
 export class UnitsConverorService {
   private valueToConvert: number;
   private origin: IFoundUnit;
